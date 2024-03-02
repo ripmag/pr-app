@@ -1,12 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { settingsModel } from "../models/settings";
+// import { SettingsModel } from "../models/settings";
+
 
 export const settingsSlice = createSlice ({
     name: 'settings',
-    initialState: settingsModel,
+    // initialState: new SettingsModel(),
+    initialState: {language: 'de'},
     reducers: {
         setLanguage: (state, action) => {console.log('action.payload',action.payload)
-            state.language = action.payload;
+            state.language = action.payload;            
         },
     },
 })
