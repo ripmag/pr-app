@@ -2,8 +2,10 @@ import logo from './logo.svg';
 import { connect } from 'react-redux';
 import './App.css';
 import { useTranslation } from 'react-i18next';
+import './common/assets/scss/styles.scss';
 
 import LanguageSelector from './common/components/LanguageSelector';
+import ColorThemeSwitcher from './common/components/ColorThemeSwitcher';
 
 const App = (props) => {
   const { t } = useTranslation();
@@ -13,6 +15,7 @@ const App = (props) => {
         <img src={logo} className="App-logo" alt="logo" />
         {t('Hello World')}
         <LanguageSelector/>
+        <ColorThemeSwitcher/>
       </header>
     </div>
   );

@@ -1,3 +1,6 @@
+import Types from "../classes/types";
+
 export class SettingsModel {
-    language = 'en'
+    language = 'aa';
+    theme = Types.LIGHT;
 }

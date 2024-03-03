@@ -5,6 +5,10 @@ const AppConfig = {
         Types.LANGUAGE_EN,
         Types.LANGUAGE_RU,
     ],
+    colorsThemes: [
+        Types.DARK,
+        Types.LIGHT,
+    ],
 }
 
 export default AppConfig;

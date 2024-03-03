@@ -1,0 +1,9 @@
+@import './color-theme-light';
+@import './color-theme-dark';
+
+@import './components/language-selector';
+
+body {
+    background: var(--color--background);
+    color: var(--color--text);
+}

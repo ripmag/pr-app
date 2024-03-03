@@ -1,6 +1,12 @@
-import { SettingsModel } from "../models/settings";
+// import { SettingsModel } from "../models/settings";
+import Types from "../classes/types";
 
-const settings = (state = new SettingsModel(), action) => {
+const initialState = {
+    language: Types.LANGUAGE_EN,
+    theme: Types.LIGHT,
+}
+
+const settings = (state = initialState, action) => {
     switch (action.type) {
         default:
             return state;
