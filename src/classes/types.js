@@ -4,4 +4,6 @@ export default class Types {
 
     static DARK = 'dark';
     static LIGHT = 'light';
+
+    static REGISTER_SETTINGS = 'settings';
 }
