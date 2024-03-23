@@ -5,7 +5,7 @@ import classNames from "classnames";
 const Button = props => (
     <button
         className={classNames('Button', props.className)}
-        disabled={props.disable}
+        disabled={props.disabled}
         onClick={props.onClick}
     >
         {props.children}            
@@ -14,8 +14,8 @@ const Button = props => (
 
 Button.propTypes = {
     className: PropTypes.string,
-    disable: PropTypes.bool,
-    onclick: PropTypes.func,    
+    disabled: PropTypes.bool,
+    onClick: PropTypes.func,    
 };
 
 export default Button;

@@ -6,7 +6,7 @@
 @import './color-theme-dark';
 
 @import './components/language-selector';
-@import './components/button';
+@import './components/buttons/button';
 
 body {
     background: var(--color--background);
