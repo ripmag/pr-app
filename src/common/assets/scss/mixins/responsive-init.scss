@@ -1,0 +1,36 @@
+@import "breakpoints";
+
+$base-size: 1;
+$ratio-size-hd-full: 0.9;
+$ratio-size-hd-plus: 0.8;
+$ratio-size-hd: 0.8;
+$ratio-size-laptop: 0.7;
+$ratio-size-tablet: 0.7;
+
+:root {
+    --size: #{$base-size};
+}
+
+:root[responsive="true"] {
+    --size: #{$base-size};
+
+    @include bp-hd-full {
+        --size: #{$ratio-size-hd-full};
+    }
+
+    @include bp-hd-plus {
+        --size: #{$ratio-size-hd-plus};
+    }
+
+    @include bp-hd {
+        --size: #{$ratio-size-hd};
+    }
+
+    @include bp-laptop {
+        --size: #{$ratio-size-laptop};
+    }
+
+    @include bp-tablet {
+        --size: #{$ratio-size-tablet};
+    }
+}

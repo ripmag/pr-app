@@ -4,8 +4,15 @@ import './App.css';
 import { useTranslation } from 'react-i18next';
 import './common/assets/scss/styles.scss';
 
+import AppConfig from './AppConfig';
+
 import LanguageSelector from './common/components/LanguageSelector';
 import ColorThemeSwitcher from './common/components/ColorThemeSwitcher';
+
+
+if (AppConfig.features.isEnableRsponsiveMode) {
+  document.documentElement.setAttribute('responsive', "true")
+}
 
 
 const App = (props) => {

@@ -9,6 +9,10 @@ const AppConfig = {
         Types.DARK,
         Types.LIGHT,
     ],
+    features: {
+        isEnableRsponsiveMode: true,
+    }
+
 }
 
 export default AppConfig;
