@@ -6,7 +6,6 @@ import './common/assets/scss/styles.scss';
 
 import LanguageSelector from './common/components/LanguageSelector';
 import ColorThemeSwitcher from './common/components/ColorThemeSwitcher';
-import x from './public/IMG_2117.jpg';
 
 
 const App = (props) => {
@@ -17,8 +16,7 @@ const App = (props) => {
         <img src={logo} className="App-logo" alt="logo" />
         {t('Hello World')}
         <LanguageSelector/>
-        <ColorThemeSwitcher/>
-        <img src={x}/>
+        <ColorThemeSwitcher/>        
       </header>
     </div>
   );
