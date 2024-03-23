@@ -1,0 +1,18 @@
+.Button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: normal;
+    color: var(--color--text);
+    background: var(--color--button);
+    text-transform: capitalize;
+
+    &[disabled] {
+        opacity: 0.7;
+        cursor: not-allowed;
+    }
+}
