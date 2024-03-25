@@ -15,10 +15,11 @@ const LoginLayout = (props) => {
     const { t } = useTranslation();
 
     const handleOnLogin = () => {
+        let authData = {};
         authData.email = email;
         authData.password = password;
 
-        Register(Types.REGISTER_NAME, authData);
+        Register.set(Types.REGISTER_NAME, authData);
     }
     
     return (
@@ -37,7 +38,7 @@ const LoginLayout = (props) => {
             <Button
                 onClick={handleOnLogin}
             >
-                {t('Sign In')}
+                {t('Log In')}
             </Button>
         </div>
     );

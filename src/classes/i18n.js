@@ -15,7 +15,10 @@ i18n
     },
     ru: {
         translation: {
-        "Hello World": "Привет мир"
+        "Hello World": "Привет мир",
+        "Email": "Электронная почта",
+        "Password": "Пароль",
+        "Log In": "Войти",
         }
     }
     },

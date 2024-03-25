@@ -1,30 +1,28 @@
-import logo from './logo.svg';
 import { connect } from 'react-redux';
-import './App.css';
-import { useTranslation } from 'react-i18next';
-import './common/assets/scss/styles.scss';
+import { Routes, Route } from 'react-router-dom';
+
+import MobileLayout from './common/components/auth/MobileLayout';
+import MainPage from './common/pages/MainPage';
 
 import AppConfig from './AppConfig';
-
-import LanguageSelector from './common/components/LanguageSelector';
-import ColorThemeSwitcher from './common/components/ColorThemeSwitcher';
-
 
 if (AppConfig.features.isEnableRsponsiveMode) {
   document.documentElement.setAttribute('responsive', "true")
 }
 
-
 const App = (props) => {
-  const { t } = useTranslation();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        {t('Hello World')}
-        <LanguageSelector/>
-        <ColorThemeSwitcher/>        
-      </header>
+      <Routes>
+        <Route
+          path={AppConfig.defines.AUTH_URL}
+          element={<MobileLayout />}
+        />
+        <Route
+          path={AppConfig.defines.MAIN_URL}
+          element={<MainPage />}
+        />
+      </Routes>
     </div>
   );
 }

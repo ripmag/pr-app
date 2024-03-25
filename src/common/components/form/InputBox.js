@@ -80,7 +80,7 @@ InputBox.propTypes = {
     disabled: PropTypes.bool,
     autoFocus: PropTypes.bool,
     enableClearButton: PropTypes.bool,
-    value: PropTypes.oneOf([
+    value: PropTypes.oneOfType([
         PropTypes.string,
     ]),
     type: PropTypes.oneOf([

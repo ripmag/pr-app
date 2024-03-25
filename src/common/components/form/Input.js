@@ -2,10 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from "classnames";
 
-import { useTranslation } from 'react-i18next';
-
 const Input = props => {
-    const { t } = useTranslation();
 
     return (
         <div className={classNames('Input', props.className, {disabled: props.disabled})}>
@@ -15,13 +12,13 @@ const Input = props => {
                 className='Input__input'
                 id={props.id}
                 name={props.name}
-                placeholder={t(props.placeholder)}
+                placeholder={props.placeholder}
                 value={props.value}
                 type={props.type}
                 autoComplete={props.autoComplete}
-                disable={props.disabled}
+                disabled={props.disabled}
                 onBlur={props.onBlur}
-                onChange={props.onChange}
+                onChange={e => props.onChange(e.target.value)}
                 onFocus={props.onFocus}
             >
                 {props.children}            
@@ -30,7 +27,7 @@ const Input = props => {
             {!!props.value && !props.disabled && props.enableClearButton && (
                 <div
                     className='Input__clear'
-                    onClick={() => props.onChange({target: {name: props.name, value: ''} })}
+                    onClick={() => props.onChange('')}
                 >
                     X
                 </div>
