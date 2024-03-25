@@ -6,4 +6,5 @@ export default class Types {
     static LIGHT = 'light';
 
     static REGISTER_SETTINGS = 'settings';
+    static REGISTER_NAME = 'auth_info';
 }
