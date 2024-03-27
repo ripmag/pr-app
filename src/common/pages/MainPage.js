@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
-import AppConfig from '../../AppConfig';
+// import AppConfig from '../../AppConfig';
 import LanguageSelector from '../components/LanguageSelector';
 import ColorThemeSwitcher from '../components/ColorThemeSwitcher';
 
