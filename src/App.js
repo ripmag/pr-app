@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
 
+import AuthRoute from './common/components/AuthRoute';
 import MobileLayout from './common/components/auth/MobileLayout';
 import MainPage from './common/pages/MainPage';
 
@@ -13,6 +14,7 @@ if (AppConfig.features.isEnableRsponsiveMode) {
 const App = (props) => {
   return (
     <div className="App">
+      <AuthRoute />
       <Routes>
         <Route
           path={AppConfig.defines.AUTH_URL}
