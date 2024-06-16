@@ -10,6 +10,7 @@ const MobileLayout = (props) => {
 
     return (
         <div className='MobileLayout'>
+            test
             {getLoginLayout()}
         </div>
     );
